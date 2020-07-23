@@ -1,0 +1,229 @@
+.listings-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.eo-button-save:hover {
+    border-color: transparent;
+    color: #008329
+}
+
+.eo-button-save.active {
+    color: #008329;
+    border-color: transparent;
+    -webkit-box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+    box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35)
+}
+
+
+/* ---------------------------------- */
+/* User Profile - 个人详情 简历
+------------------------------------- */
+@media (max-width: 991px){
+    .profile-viewer-loader-container {
+        margin-top: -10px;
+    }
+}
+.user-profile-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.user-profile-title .position-relative {
+    position: relative;
+}
+
+.user-profile-title .identity-container {
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+@media (min-width: 992px){
+    .user-profile-title .identity-container {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.profile-nav-tabs .tab-btn {
+    width: 100%;
+}
+
+.profile-nav-tabs .tab-btn {
+    text-align: left;
+    font-size: 13px;
+    padding: 9px 20px;
+    font-weight: 500;
+    border-left: 4px solid transparent;
+}
+
+.tab-btn:hover, .tab-btn:active, .tab-btn:focus {
+    color: #19a463;
+    background-color: #f9f9f9;
+}
+
+.profile-nav-tabs .tab-btn:not(:first-child) {
+    margin-top: 2px;
+}
+
+.tab-btn.active, .tab-btn.active:hover, .tab-btn.active:active, .tab-btn.active:focus {
+    color: #1dbf73 !important;
+    border-color: #1dbf73 !important;
+    background-color: #f9f9f9 ;
+}
+
+.profile-nav-tabs .tab-btn.active {
+    font-weight: 700;
+}
+
+
+.profile-job-success {
+    max-width: 100px;
+    position: relative;
+    height: 4px;
+    background-color: #E0E0E0;
+}
+
+.profile-job-success-bar {
+    height: 100%;
+    background-color: #14BFF4;
+}
+
+.user-profile-summary .stat-amount {
+    font-size: 17px;
+    color: #222;
+    font-weight: 700;
+}
+
+
+.work-history .tabs-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.portfolio-image-placeholder {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #F2F2F2;
+    width: 100%;
+    padding-top: 75%;
+}
+
+.portfolio-image-placeholder img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.pp-header-section {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+.agency-box {
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .agency-box {
+        width: 50%;
+        max-width: 400px;
+    }
+}
+.agency-box .box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    border: thin solid #e0e0e0;
+}
+
+.avatar.avatar-company, .avatar.glyphicon {
+    border: none;
+}
+
+.avatar-company:before {
+    color: #fff;
+    background-color: #656565;
+}
+.avatar {
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    color: #E0E0E0;
+    border: solid 1px #E0E0E0;
+}
+.avatar-company {
+    border-radius: 0;
+}
+.avatar-xs, .avatar-30 {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    padding: 0;
+}
+.agency-box .box-container .avatar {
+    min-width: 30px;
+}
+
+.agency-box .box-container .box-body {
+    min-width: 0;
+}
+.agency-box .box-container .box-body .body-title {
+    font-size: 11px;
+    color: #656565;
+    font-weight: 700!important;
+}
+.agency-box .box-container .box-body .body-link a, .agency-box .box-container .box-body .body-link span {
+    font-size: 12px;
+    color: #1dbf73!important;
+    font-weight: 700!important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: pre;
+}
+
+
+/* ---------------------------------- */
+/* Search List- 搜索结果
+------------------------------------- */
+.tile-flex-col .tile-name-col {
+    overflow: hidden;
+}
+
+.freelancer-tile-name {
+    word-break: normal;
+    color: #37a000!important;
+}
+
+.freelancer-tile-title_compact {
+    margin-top: 2px!important;
+}
+
+.ats-tile-buttons-responsive>div:not(:first-child), .ats-tile-buttons>div:not(:first-child) {
+    margin-left: 15px;
+}
+
+.ats-tile-buttons .tile-button {
+    min-width: 120px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.ats-tile-buttons-responsive .tile-button-flex-fill {
+    -webkit-box-flex: 1!important;
+    -ms-flex: 1 1 50%!important;
+    flex: 1 1 50%!important;
+}
