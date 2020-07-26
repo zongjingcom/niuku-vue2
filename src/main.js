@@ -4,6 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import 'element-ui/lib/theme-chalk/display.css';
 
 Vue.config.productionTip = false
 
