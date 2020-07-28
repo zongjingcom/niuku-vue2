@@ -1,43 +1,38 @@
 <template>
-  <div>
-    <div id="header">
-      <div class="container">
-        <!-- Left Side Content -->
-        <div class="left-side">
-          <!-- Logo -->
-          <div id="logo">
-            <a href="/">
-              <img
-                src="@/assets/images/niuku-logo.png"
-                alt="牛库"
-              />
-            </a>
-          </div>
-          <div class="headblock">
-            <span class="slogan">互联网顶尖创新众包服务平台</span>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <!-- Left Side Content / End -->
-
-        <!-- Right Side Content / End -->
-        <div class="right-side">
-          <div class="header-widget">
-            <div style="display:inline-block;font-size:14px;">
-              还没注册账号？
+  <div id="wrapper">
+    <header id="header-container" class="fullwidth">
+      <!-- Header -->
+      <div id="header">
+        <div class="container">
+          <!-- Left Side Content -->
+          <div class="left-side">
+            <!-- Logo -->
+            <div id="logo">
+              <a href="/">
+                <img src="@/assets/images/niuku-logo.png" alt="牛库" />
+              </a>
             </div>
-            <a
-              style="position: relative;top: 50%;display:inline-block;transform:translateY(-50%);font-size:14px;"
-              href="/register"
-              class="button dark ripple-effect"
-              >注册</a
-            >
+            <div class="headblock">
+              <span class="slogan">互联网顶尖创新众包服务平台</span>
+            </div>
+            <div class="clearfix"></div>
+            <!-- Main Navigation -->
           </div>
+          <!-- Left Side Content / End -->
+
+          <!-- Right Side Content / End -->
+          <div class="right-side">
+            <div class="header-widget">
+							<div style="display:inline-block;line-height:82px;">还没注册账号？</div>
+							<el-button type="primary">注册</el-button>
+						</div>
+          </div>
+          <!-- Right Side Content / End -->
         </div>
-        <!-- Right Side Content / End -->
       </div>
-    </div>
-    
+      <!-- Header / End -->
+    </header>
+
     <div id="titlebar" class="gradient" style="margin-bottom:20px">
       <div class="container">
         <div class="row">
@@ -62,61 +57,28 @@
               </span>
             </div>
 
-            <form
-              method="post"
-              id="register-account-form"
-              class="login-form validform"
-              action="/"
-            >
+            <form method="post" id="register-account-form" class="login-form validform" action="/">
               <div class="margin-bottom-14" title="请输入登录账号">
-                <input
-                  type="text"
-                  class="input-text with-border"
-                  name="username"
+                <el-input
                   placeholder="用户名/邮箱/手机号码"
-                  value="/"
-                  nullmsg="请输入登录账号"
-                  data-type="*"
-                  errormsg="登录账号错误"
-                />
+                  v-model="input_account"
+                  clearable>
+                </el-input>
               </div>
 
               <div class="margin-bottom-14" title="请输入登录密码">
-                <input
-                  type="password"
-                  class="input-text with-border"
-                  name="password"
-                  placeholder="登录密码"
-                  nullmsg="请输入登录密码"
-                  data-type="*6-16"
-                  errormsg="密码应为6-16位长度"
-                  autocomplete="off"
-                  disableautocomplete
-                />
-                <span class="Validform_checktip Validform_wrong"></span>
+                <el-input placeholder="请输入登录密码" v-model="input_pwd" show-password></el-input>
               </div>
 
               <div>
                 <div class="checkbox" style="margin-left: 3px;">
-                  <input
-                    type="checkbox"
-                    id="chekcbox-remember"
-                    checked
-                    name="remember"
-                    value="remember me"
-                  />
-                  <label for="chekcbox-remember">
-                    <span class="checkbox-icon"></span> 记住我
-                  </label>
+                  <el-checkbox v-model="checked_remember">记住我</el-checkbox>
                 </div>
                 <a href="/password">
-                  <div
-                    style="display: inline-block;float: right;margin-right: 3px;"
-                  >
-                    找回密码
-                  </div>
+                  <div style="display: inline-block;float: right;margin-right: 3px;">找回密码</div>
                 </a>
               </div>
+              <el-button type="primary">登录<i class="el-icon-arrow-right el-icon--right"></i></el-button>
               <button
                 class="button full-width button-sliding-icon ripple-effect margin-top-10"
                 type="submit"
@@ -146,8 +108,22 @@
 <script>
 export default {
   name: "login",
-  components: { },
+  components: {},
+  data() {
+      return {
+        input_account: '',
+        input_pwd: '',
+        checked_remember: '',
+      }
+    }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.headblock {
+    display: inline-block;
+    height: 100%;
+    line-height: 82px;
+    font-size: 14px;
+}
+</style>

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Error404 from '../components/error/404.vue'
 import Home from '../pages/home/home.vue'
-import Login from '../pages/login/Login.vue'
+import Login from '../pages/login/login.vue'
 import Jobs from '../pages/jobs/index.vue'
 import Detail from '../pages/jobs/detail.vue'
 
