@@ -5,7 +5,7 @@
         <div class="grid-content bg-purple-dark" >
           <section id="not-found" class="center margin-top-50 margin-bottom-25">
             <h2>404 <i class="icon-line-awesome-question-circle"></i></h2>
-            <p>We're sorry, but the page you were looking for doesn't exist</p>
+            <p>页面不见了～</p>
           </section>
         </div>
       </el-col>

@@ -1,6 +1,43 @@
 <template>
   <div>
-    <Header/>
+    <div id="header">
+      <div class="container">
+        <!-- Left Side Content -->
+        <div class="left-side">
+          <!-- Logo -->
+          <div id="logo">
+            <a href="/">
+              <img
+                src="@/assets/images/niuku-logo.png"
+                alt="牛库"
+              />
+            </a>
+          </div>
+          <div class="headblock">
+            <span class="slogan">互联网顶尖创新众包服务平台</span>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- Left Side Content / End -->
+
+        <!-- Right Side Content / End -->
+        <div class="right-side">
+          <div class="header-widget">
+            <div style="display:inline-block;font-size:14px;">
+              还没注册账号？
+            </div>
+            <a
+              style="position: relative;top: 50%;display:inline-block;transform:translateY(-50%);font-size:14px;"
+              href="/register"
+              class="button dark ripple-effect"
+              >注册</a
+            >
+          </div>
+        </div>
+        <!-- Right Side Content / End -->
+      </div>
+    </div>
+    
     <div id="titlebar" class="gradient" style="margin-bottom:20px">
       <div class="container">
         <div class="row">
@@ -10,6 +47,7 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-xl-4" style="margin: 0 auto;">
@@ -24,7 +62,12 @@
               </span>
             </div>
 
-            <form method="post" id="register-account-form" class="login-form validform" action="/">
+            <form
+              method="post"
+              id="register-account-form"
+              class="login-form validform"
+              action="/"
+            >
               <div class="margin-bottom-14" title="请输入登录账号">
                 <input
                   type="text"
@@ -67,7 +110,11 @@
                   </label>
                 </div>
                 <a href="/password">
-                  <div style="display: inline-block;float: right;margin-right: 3px;">找回密码</div>
+                  <div
+                    style="display: inline-block;float: right;margin-right: 3px;"
+                  >
+                    找回密码
+                  </div>
                 </a>
               </div>
               <button
@@ -97,13 +144,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Header from '@/components/header/Header.vue'
 export default {
   name: "login",
-  components: {Header},
+  components: { },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

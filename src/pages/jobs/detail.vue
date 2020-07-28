@@ -3,6 +3,7 @@
     <div class="row">
       <!-- Content -->
       <div class="col-xl-8 col-lg-8 content-right-offset">
+
         <header>
           <ul class="breadcrumbs">
             <li>
@@ -116,6 +117,7 @@
             </li>
           </ul>
         </section>
+
         <!-- Description -->
         <div class="single-page-section">
           <h3 class="margin-bottom-25">详细描述</h3>
@@ -148,6 +150,7 @@
             <span>设计</span>
           </div>
         </div>
+        
         <!-- Atachments -->
         <div class="single-page-section">
           <h3>文档附件</h3>
@@ -249,6 +252,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </template>
