@@ -8,7 +8,7 @@
           <!-- Logo -->
           <div id="logo">
             <a href="/">
-              <img src="/themes/default/assets/images/niuku-logo.png" alt="牛库" />
+              <img src="@/assets/images/niuku-logo.png" alt="牛库" />
             </a>
           </div>
           <div class="headblock">

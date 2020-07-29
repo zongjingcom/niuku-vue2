@@ -23,9 +23,9 @@
           <!-- Right Side Content / End -->
           <div class="right-side">
             <div class="header-widget">
-							<div style="display:inline-block;line-height:82px;">还没注册账号？</div>
-							<el-button type="primary">注册</el-button>
-						</div>
+              <div style="display:inline-block;line-height:82px;">还没注册账号？</div>
+              <el-button type="primary">注册</el-button>
+            </div>
           </div>
           <!-- Right Side Content / End -->
         </div>
@@ -58,45 +58,37 @@
             </div>
 
             <form method="post" id="register-account-form" class="login-form validform" action="/">
-              <div class="margin-bottom-14" title="请输入登录账号">
-                <el-input
-                  placeholder="用户名/邮箱/手机号码"
-                  v-model="input_account"
-                  clearable>
-                </el-input>
+              <div class="el-form-item" title="请输入登录账号">
+                <el-input placeholder="用户名/邮箱/手机号码" v-model="input_account" clearable></el-input>
               </div>
 
-              <div class="margin-bottom-14" title="请输入登录密码">
+              <div class="el-form-item" title="请输入登录密码">
                 <el-input placeholder="请输入登录密码" v-model="input_pwd" show-password></el-input>
               </div>
 
-              <div>
-                <div class="checkbox" style="margin-left: 3px;">
-                  <el-checkbox v-model="checked_remember">记住我</el-checkbox>
-                </div>
-                <a href="/password">
-                  <div style="display: inline-block;float: right;margin-right: 3px;">找回密码</div>
-                </a>
+              <el-checkbox v-model="checked_remember"  style="margin-left: 3px;">记住我</el-checkbox>
+
+              <div class="el-form-item__content">
+                <el-button type="primary">
+                  登录
+                  <i class="el-icon-arrow-right el-icon--right"></i>
+                </el-button>
               </div>
-              <el-button type="primary">登录<i class="el-icon-arrow-right el-icon--right"></i></el-button>
-              <button
-                class="button full-width button-sliding-icon ripple-effect margin-top-10"
-                type="submit"
-              >
-                登录
-                <i class="icon-material-outline-arrow-right-alt"></i>
-              </button>
             </form>
+            <div class="clearfix">
+							<a href="http://kppw/register" class="pull-left">免费注册</a>
+							<a href="http://kppw/password/email" class="pull-right">忘记密码？</a>
+						</div>
             <div class="social-login-separator">
               <span>或</span>
             </div>
             <div class="social-login-buttons">
-              <button class="qq-login ripple-effect">
-                <i class="icon-brand-qq"></i> 通过QQ登录
-              </button>
-              <button class="wechat-login ripple-effect">
-                <i class="icon-brand-weixin"></i> 通过微信登录
-              </button>
+              <el-button type="primary" class="qq-login ripple-effect">
+                <i class="icon-brand-qq"></i>通过QQ登录
+              </el-button>
+              <el-button type="primary" class="wechat-login ripple-effect">
+                <i class="icon-brand-weixin"></i>通过微信登录
+              </el-button>
             </div>
           </div>
         </div>
@@ -110,20 +102,135 @@ export default {
   name: "login",
   components: {},
   data() {
-      return {
-        input_account: '',
-        input_pwd: '',
-        checked_remember: '',
-      }
-    }
+    return {
+      input_account: "",
+      input_pwd: "",
+      checked_remember: "",
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+
 .headblock {
-    display: inline-block;
-    height: 100%;
-    line-height: 82px;
+  display: inline-block;
+  height: 100%;
+  line-height: 82px;
+  font-size: 14px;
+}
+
+/* Welcome Text */
+.welcome-text {
+  display: block;
+  text-align: center;
+  color: #808080;
+  margin-bottom: 33px;
+  h3 {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    font-size: 24px;
+  }
+  span {
+    a {
+      font-weight: 500;
+    }
+    display: block;
+    margin-top: 4px;
+  }
+}
+
+/* Social Login Separator */
+
+.social-login-separator {
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin: 38px 0 15px 0;
+  height: 1px;
+  &:before {
+    width: 100%;
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 0;
+  }
+  span {
+    background-color: #fff;
+    top: 0;
+    position: absolute;
+    line-height: 10px;
+    top: -5px;
+    margin-left: -15px;
+    padding: 0px 10px;
+    color: #808080;
+  }
+}
+
+/* Social Login Buttons */
+
+.social-login-buttons {
+  display: flex;
+  width: calc(100% + 20px);
+  button {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #333;
+    color: #333;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-right: 20px;
     font-size: 14px;
+    padding: 9px 5px;
+    max-width: 50%;
+    transition: 0.3s;
+    &:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    i {
+      position: relative;
+      top: 1px;
+      margin-right: 7px;
+      font-size: 15px;
+    }
+  }
+  .facebook-login {
+    border-color: #3b5998;
+    color: #3b5998;
+    &:hover {
+      background-color: #3b5998;
+      color: #fff;
+    }
+  }
+  .google-login {
+    border-color: #dd4b39;
+    color: #dd4b39;
+    &:hover {
+      background-color: #dd4b39;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .social-login-separator {
+    margin-bottom: 25px;
+  }
+  .social-login-buttons {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    a {
+      width: 100%;
+      display: block;
+      max-width: 100%;
+    }
+  }
 }
 </style>
