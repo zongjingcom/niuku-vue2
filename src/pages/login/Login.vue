@@ -99,8 +99,12 @@
               </div>
             </form>
             <div class="clearfix side-by-side">
-              <a href="http://kppw/register">免费注册</a>
-              <a href="http://kppw/password/email" class="right">忘记密码？</a>
+              <div>
+                <router-link :to="'signup'">免费注册</router-link>
+              </div>
+              <div class="right">
+                <router-link :to="'reset-password'">忘记密码？</router-link>
+              </div>
             </div>
             <div class="social-login-separator">
               <span>或</span>
