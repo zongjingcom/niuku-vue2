@@ -89,15 +89,7 @@ export default {
     .not-found-search.intro-banner-search-form {
       margin-top: -30px;
     }
-    .login-register-page .social-login-buttons button {
-      margin-right: 0;
-      width: 100%;
-      display: block;
-      max-width: 100%;
-    }
+    
   }
 
-  .login-register-page .welcome-text h3 {
-    font-size: 26px;
-  }
 </style>

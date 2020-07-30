@@ -23,7 +23,9 @@
           <!-- Right Side Content / End -->
           <div class="right-side">
             <div class="header-widget">
-              <div style="display:inline-block;line-height:82px;">还没注册账号？</div>
+              <div style="display:inline-block;line-height:82px;">
+                还没注册账号？
+              </div>
               <el-button type="primary">注册</el-button>
             </div>
           </div>
@@ -45,48 +47,69 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xl-4" style="margin: 0 auto;">
+        <div class="col-xl-4 col-md-5 col-sm-7" style="margin: 0 auto;">
           <div class="login-register-page">
             <div class="welcome-text">
               <h4>
                 <b>欢迎访问牛库</b>
               </h4>
-              <span>
-                还没有注册？ 请
-                <a href="/">创建帐号!</a>
-              </span>
             </div>
 
-            <form method="post" id="register-account-form" class="login-form validform" action="/">
+            <form
+              method="post"
+              id="register-account-form"
+              class="login-form validform"
+              action="/"
+            >
               <div class="el-form-item" title="请输入登录账号">
-                <el-input placeholder="用户名/邮箱/手机号码" v-model="input_account" clearable></el-input>
+                <el-input
+                  placeholder="用户名/邮箱/手机号码"
+                  v-model="input_account"
+                  clearable
+                ></el-input>
               </div>
 
-              <div class="el-form-item" title="请输入登录密码">
-                <el-input placeholder="请输入登录密码" v-model="input_pwd" show-password></el-input>
+              <div
+                class="el-form-item"
+                title="请输入登录密码"
+                style="margin-bottom: 10px;"
+              >
+                <el-input
+                  placeholder="请输入登录密码"
+                  v-model="input_pwd"
+                  show-password
+                ></el-input>
               </div>
-
-              <el-checkbox v-model="checked_remember"  style="margin-left: 3px;">记住我</el-checkbox>
-
-              <div class="el-form-item__content">
-                <el-button type="primary">
+              <div
+                class="el-form-item"
+                title="请输入登录密码"
+                style="margin-bottom: 10px;"
+              >
+                <el-checkbox
+                  v-model="checked_remember"
+                  style="margin-left: 3px;"
+                  >记住我</el-checkbox
+                >
+              </div>
+              <div class="el-form-item">
+                <el-button type="primary" @click="onSubmit" class="col">
                   登录
                   <i class="el-icon-arrow-right el-icon--right"></i>
                 </el-button>
               </div>
             </form>
-            <div class="clearfix">
-							<a href="http://kppw/register" class="pull-left">免费注册</a>
-							<a href="http://kppw/password/email" class="pull-right">忘记密码？</a>
-						</div>
+            <div class="clearfix side-by-side">
+              <a href="http://kppw/register">免费注册</a>
+              <a href="http://kppw/password/email" class="right">忘记密码？</a>
+            </div>
             <div class="social-login-separator">
               <span>或</span>
             </div>
             <div class="social-login-buttons">
-              <el-button type="primary" class="qq-login ripple-effect">
+              <el-button class="qq-login ripple-effect">
                 <i class="icon-brand-qq"></i>通过QQ登录
               </el-button>
-              <el-button type="primary" class="wechat-login ripple-effect">
+              <el-button class="wechat-login ripple-effect">
                 <i class="icon-brand-weixin"></i>通过微信登录
               </el-button>
             </div>
@@ -108,6 +131,11 @@ export default {
       checked_remember: "",
     };
   },
+  methods: {
+    onSubmit() {
+      console.log("submit!");
+    },
+  },
 };
 </script>
 
@@ -119,7 +147,17 @@ export default {
   line-height: 82px;
   font-size: 14px;
 }
-
+@media (max-width: 1099px){
+  header.fullwidth .container {
+    padding: 0 20px;
+  }
+  .headblock {
+      display: none;
+  }
+  #titlebar {
+    padding-top: 20px;
+  }
+}
 /* Welcome Text */
 .welcome-text {
   display: block;
@@ -140,7 +178,14 @@ export default {
     margin-top: 4px;
   }
 }
-
+.side-by-side {
+  display: flex;
+  align-items: center;
+  .right {
+    flex-grow: 1;
+    text-align: right;
+  }
+}
 /* Social Login Separator */
 
 .social-login-separator {
@@ -200,19 +245,21 @@ export default {
       font-size: 15px;
     }
   }
-  .facebook-login {
-    border-color: #3b5998;
-    color: #3b5998;
+  .qq-login {
+    border-color: #51b7ec;
+    color: #51b7ec;
+    background-color: #fff;
     &:hover {
-      background-color: #3b5998;
+      background-color: #51b7ec;
       color: #fff;
     }
   }
-  .google-login {
-    border-color: #dd4b39;
-    color: #dd4b39;
+  .wechat-login {
+    border-color: #28b661;
+    color: #28b661;
+    background-color: #fff;
     &:hover {
-      background-color: #dd4b39;
+      background-color: #28b661;
       color: #fff;
     }
   }
@@ -232,5 +279,15 @@ export default {
       max-width: 100%;
     }
   }
+  .login-register-page .social-login-buttons button {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+  }
+}
+.login-register-page .welcome-text h3 {
+  font-size: 26px;
 }
 </style>
